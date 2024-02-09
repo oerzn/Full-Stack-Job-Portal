@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    h1{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(19, 18, 20);
+        padding-top: 5px;
+        padding-bottom: 10px
+    }
+    #banner{
+        padding-left: 15px;
+
+    }
+
+    h2{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 37px;
+        color: rgb(13, 85, 95);
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    p{
+        font-family: 'Times New Roman', Times, serif;
+        
+
+    }
+    #container{
+        max-width: 720px;
+        margin:auto;
+       
+    }
+    
+  </style>
+  
+</head>
+
+    <body>
+        <div id="container">
+        <h1 style="text-align: center; font-size: 50px;">Microsoft Job Portal</h1>
+        <img id="banner"  src ="http://192.168.29.222:5000/static/banner.jpg" height="360" width="98%">
+        <h2 style="text-align: center;">About Microsoft</h2>
+        <p style="font-size: 20px;">
+          
+      At , you'll take risks, push boundaries, and grow more than you thought possible. And you won’t be alone on that journey. We have something special here; we put our employees at the center of everything we do, and we know that what we offer is essential not only to your work but to your life too.  
+      
+      In addition to world-class benefits designed to help you and your family live well, we offer competitive pay, bonuses and stock awards to eligible employees based on individual performance, as well as benefits to help you lead a healthy life, invest in your future, and enjoy your journey here at Microsoft. Empowering you. So, you can empower the world. 
+      There may be some variances in specific benefits across regions.
+        </p>
+        <h2 style="text-align: center;">Open Position</h2>
+        <div class="mb-2">
+            {% for job in jobs %}
+            {% include 'jobs.html' %}
+            
+
+            {%endfor%}
+        </div>
+        <div style="text-align: center; padding-top: 10px;">
+            <button class="btn btn-primary btn-lg mb-4">Contact Us</button>
+            <p>Copywrite 2024, Harsh</p>
+        </div>
+        
+    </div>
+      </body>
+
+
+</html>             
