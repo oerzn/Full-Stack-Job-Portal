@@ -42,17 +42,24 @@
 </head>
 
     <body>
+        {% include 'nav.html' %}
         <div id="container">
         <h1 style="text-align: center; font-size: 50px;">Microsoft Job Portal</h1>
         <img id="banner"  src ="static\banner.jpg" height="360" width="98%" alt="banner">
-        <h2 style="text-align: center;">About Microsoft</h2>
+        <h2 style="text-align: center; padding-top: 20px; padding-bottom: 20px; ">About Microsoft</h2>
+        <div class="row">
+            <div class="col-6">
         <p style="font-size: 20px;">
           
       At , you'll take risks, push boundaries, and grow more than you thought possible. And you won’t be alone on that journey. We have something special here; we put our employees at the center of everything we do, and we know that what we offer is essential not only to your work but to your life too.  
       
-      In addition to world-class benefits designed to help you and your family live well, we offer competitive pay, bonuses and stock awards to eligible employees based on individual performance, as well as benefits to help you lead a healthy life, invest in your future, and enjoy your journey here at Microsoft. Empowering you. So, you can empower the world. 
-      There may be some variances in specific benefits across regions.
+      In addition to world-class benefits designed to help you and your family live well, we offer competitive pay, bonuses and stock awards to eligible employees based on individual performance, as well as benefits to help you lead a healthy life, invest in your future, and enjoy your journey here at Microsoft. Empowering you. 
         </p>
+    </div>
+        <div class="d-none d-md-block col-md-6">
+        <img src="static\im2.jpg" alt="happy employees" style="height: 400px;">
+    </div>
+    </div>
         <h2 style="text-align: center;">Open Position</h2>
         <div class="mb-2">
             {% for job in jobs %}
@@ -63,7 +70,8 @@
         </div>
         <div style="text-align: center; padding-top: 10px;">
             <button class="btn btn-primary btn-lg mb-4">Contact Us</button>
-            <p>Copywrite 2024, Harsh</p>
+            {% include 'footer.html' %}
+            
         </div>
         
     </div>
