@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, text,  exc
+from sqlalchemy import create_engine, text
 
 import pymysql
 import os
@@ -12,7 +12,6 @@ import os
 
 
 
-
 timeout = 10
 connection = pymysql.connect(
   charset="utf8mb4",
@@ -20,7 +19,7 @@ connection = pymysql.connect(
   cursorclass=pymysql.cursors.DictCursor,
   db="defaultdb",
   host="jobportalharsh-jobportal.a.aivencloud.com",
-  password=os.environ["DB_CONNCECTION_PASSWORD"],
+  password= "AVNS_MVvh66EMlBD080PUK2k",
   read_timeout=timeout,
   port=12992,
   user="avnadmin",
