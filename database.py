@@ -10,7 +10,7 @@ import os
 #     result = conn.execute(text("select * from jobs"))
 #     print(result.all())
 
-
+pass_string= os.environ['DB_CONNCECTION_PASSWORD']
 
 timeout = 10
 connection = pymysql.connect(
@@ -19,7 +19,7 @@ connection = pymysql.connect(
   cursorclass=pymysql.cursors.DictCursor,
   db="defaultdb",
   host="jobportalharsh-jobportal.a.aivencloud.com",
-  password= os.environ["DB_CONNCECTION_PASSWORD"]
+  password= "pass_string"
   # password= "AVNS_MVvh66EMlBD080PUK2k",
   read_timeout=timeout,
   port=12992,
