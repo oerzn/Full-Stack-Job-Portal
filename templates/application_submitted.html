@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'bootstrap.html' %}
+    <title> Application submitted</title>
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+    <div style="max-width: 720px; margin:auto;">
+        <p>Your Application  for <b>{{job['title']}} </b> is submitted in Microsoft job portal.</p>
+    <b>Full Name :-</b><br>
+    <div>{{application['Full Name']}}</div></br>
+
+    <b>Email :-</b></br>
+    <div>{{application['Email']}}</div></br>
+
+    <b>LinkedIn Url :-</b></br>
+    <div>{{application['LinkedIn']}}</div></br>
+
+    <b>Skill Set :-</b></br>
+    <div>{{application['Skill Set']}}</div></br>
+
+    <b>Education :-</b></br>
+    <div>{{application['Education']}}</div></br>
+
+    <b>Experience :-</b></br>
+    <div>{{application['Experience']}}</div></br>
+
+
+    <b>Resume Url :-</b></br>
+    <div>{{application['Resume']}}</div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

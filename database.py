@@ -53,3 +53,20 @@ def load_job_with_db(id):
     return None
   else:
     return list1[val-1]
+  
+
+
+def add_application_to_db(job_id, data):
+    
+    query = text("INSERT INTO applications(job_id, full_name, email, linkedin_url, skill_set, education, work_experience, resume_url) VALUES (:job_id, :full_name, :email, :linkedin_url, :skill_set, education, :work_experience, :resume_url )")
+
+
+    cursor.execute(query,
+                   job_id=job_id,
+                   full_name=data['Full Name'],
+                   email=data['Email'],
+                   linkedin_url=data['LinkedIn'],
+                   skill_Set=data['Skill Set'],
+                   education=data['Education'],
+                   work_experience=data['Experience'],
+                   resume_url=data['Resume'])
