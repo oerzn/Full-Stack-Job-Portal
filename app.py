@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from database import load_jobs_with_db
+from database import load_jobs_with_db, load_job_with_db
 
 app = Flask(__name__)
 
@@ -55,6 +55,13 @@ def hello_job_portal():
 def list_job():
   jobs_list = load_jobs_with_db()
   return jsonify(jobs_list)
+
+@app.route("/jobs/<id>")
+def show_job(id):
+  job = load_job_with_db(id)
+  if job == None:
+    return "Job Not found, 404", 404
+  return render_template("jobpage.html", job=job)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)

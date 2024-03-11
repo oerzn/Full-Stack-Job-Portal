@@ -41,3 +41,15 @@ def load_jobs_with_db():
   cursor.execute("SELECT * FROM jobs")
   jobs_list = cursor.fetchall()
   return jobs_list
+
+def load_job_with_db(id):
+  val = int(id)
+  cursor.execute("SELECT * FROM jobs WHERE id = id"),
+  
+  list1 = cursor.fetchall()
+  if len(list1) == 0:
+    return None
+  if val >4:
+    return None
+  else:
+    return list1[val-1]
